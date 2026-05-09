@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ShopBrick 🧱🛒</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f8f5f1;
+    }
+
+    .slide {
+      min-height: 100vh;
+      scroll-snap-align: start;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="overflow-y-scroll snap-y snap-mandatory text-zinc-800">
+
+  <!-- HERO -->
+  <section class="slide flex items-center">
+    <div class="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:grid-cols-2 md:px-12">
+
+      <div class="flex flex-col justify-center fade-up">
+        <div
+          class="mb-6 inline-flex w-fit items-center gap-3 rounded-full bg-orange-100 px-4 py-2 text-sm font-medium text-orange-700">
+          <span>🧱🛒</span>
+          <span>Static E-Commerce Framework</span>
+        </div>
+
+        <h1 class="text-5xl font-black leading-tight md:text-7xl">
+          Static E-Commerce.<br />
+          Zero Backend.
+        </h1>
+
+        <p class="mt-8 max-w-xl text-xl leading-relaxed text-zinc-600">
+          Build your online shop locally. Deploy anywhere.
+          Receive orders directly via Stripe and PayPal.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="https://github.com/shopbrick/shopbrick"
+            class="rounded-2xl bg-zinc-900 px-8 py-4 text-lg font-semibold text-white transition hover:-translate-y-1">
+            View on GitHub
+          </a>
+
+          <a href="https://pampoprint.com"
+            class="rounded-2xl border border-zinc-300 bg-white px-8 py-4 text-lg font-semibold transition hover:-translate-y-1">
+            Live Demo
+          </a>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center fade-up">
+        <img src="/img/landing/brick-hero-shop.webp" alt="ShopBrick mascot hero"
+          class="w-full max-w-2xl rounded-[2rem] shadow-2xl" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAST DEPLOY -->
+  <section class="slide flex items-center bg-white">
+    <div class="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:grid-cols-2 md:px-12">
+
+      <div class="order-2 flex items-center justify-center fade-up md:order-1">
+        <img src="/img/landing/brick-race-car-deployment.webp" alt="Brick driving race car"
+          class="w-full max-w-xl rounded-[2rem] shadow-xl" />
+      </div>
+
+      <div class="order-1 flex flex-col justify-center fade-up md:order-2">
+        <div class="mb-4 text-5xl">⚡</div>
+
+        <h2 class="text-4xl font-black md:text-6xl">
+          Deploy Fast
+        </h2>
+
+        <p class="mt-6 max-w-xl text-xl leading-relaxed text-zinc-600">
+          Generate a static version of your shop and deploy it
+          to GitHub Pages, Netlify, or any static hosting provider.
+        </p>
+
+        <div class="mt-8 rounded-2xl bg-zinc-100 p-5 font-mono text-sm text-zinc-700">
+          npm run build
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FILESYSTEM -->
+  <section class="slide flex items-center">
+    <div class="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:grid-cols-2 md:px-12">
+
+      <div class="flex flex-col justify-center fade-up">
+        <div class="mb-4 text-5xl">📁</div>
+
+        <h2 class="text-4xl font-black md:text-6xl">
+          Products Are Just Folders
+        </h2>
+
+        <p class="mt-6 max-w-xl text-xl leading-relaxed text-zinc-600">
+          No database. No complicated CMS.
+          Products, blog posts, images and configuration
+          live directly in your filesystem.
+        </p>
+
+        <div class="mt-8 rounded-3xl bg-zinc-900 p-6 font-mono text-sm text-zinc-200 shadow-xl">
+          <pre>/data
+├── /wooden-chair
+│   ├── info.yml
+│   ├── description.txt
+│   └── /images
+</pre>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center fade-up">
+        <img src="/img/landing/brick-organizing-folders.webp" alt="Brick organizing folders"
+          class="w-full max-w-xl rounded-[2rem] shadow-2xl" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AI FRIENDLY -->
+  <section class="slide flex items-center bg-white">
+    <div class="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:grid-cols-2 md:px-12">
+
+      <div class="order-2 flex items-center justify-center fade-up md:order-1">
+        <img src="/img/landing/brick-coding-with-robot.webp" alt="Brick coding with AI robot"
+          class="w-full max-w-xl rounded-[2rem] shadow-xl" />
+      </div>
+
+      <div class="order-1 flex flex-col justify-center fade-up md:order-2">
+        <div class="mb-4 text-5xl">🤖</div>
+
+        <h2 class="text-4xl font-black md:text-6xl">
+          AI Friendly
+        </h2>
+
+        <p class="mt-6 max-w-xl text-xl leading-relaxed text-zinc-600">
+          Since ShopBrick uses plain text, YAML and files,
+          AI tools can easily generate, edit and manage content.
+        </p>
+
+        <p class="mt-4 max-w-xl text-lg leading-relaxed text-zinc-500">
+          Perfect for rapid prototyping, dropshipping stores,
+          and content automation workflows.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SAVE MONEY -->
+  <section class="slide flex items-center">
+    <div class="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:grid-cols-2 md:px-12">
+
+      <div class="flex flex-col justify-center fade-up">
+        <div class="mb-4 text-5xl">💸</div>
+
+        <h2 class="text-4xl font-black md:text-6xl">
+          Save Infrastructure Costs
+        </h2>
+
+        <p class="mt-6 max-w-xl text-xl leading-relaxed text-zinc-600">
+          No servers. No database hosting.
+          No backend maintenance.
+        </p>
+
+        <p class="mt-4 max-w-xl text-lg leading-relaxed text-zinc-500">
+          Deploy entirely on free static hosting platforms
+          and scale effortlessly.
+        </p>
+      </div>
+
+      <div class="flex items-center justify-center fade-up">
+        <img src="/img/landing/brick-money-handshake.webp" alt="Brick shaking hands with money character"
+          class="w-full max-w-xl rounded-[2rem] shadow-2xl" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STRIPE PAYPAL -->
+  <section class="slide flex items-center bg-white">
+    <div class="mx-auto grid max-w-7xl gap-16 px-6 py-20 md:grid-cols-2 md:px-12">
+
+      <div class="order-2 flex items-center justify-center fade-up md:order-1">
+        <img src="/img/landing/brick-cashier-checkout.webp" alt="Brick cashier"
+          class="w-full max-w-xl rounded-[2rem] shadow-xl" />
+      </div>
+
+      <div class="order-1 flex flex-col justify-center fade-up md:order-2">
+        <div class="mb-4 text-5xl">💳</div>
+
+        <h2 class="text-4xl font-black md:text-6xl">
+          Stripe & PayPal
+        </h2>
+
+        <p class="mt-6 max-w-xl text-xl leading-relaxed text-zinc-600">
+          Orders are processed directly by Stripe and PayPal.
+        </p>
+
+        <p class="mt-4 max-w-xl text-lg leading-relaxed text-zinc-500">
+          No backend order database required.
+          Simple, secure and reliable.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="slide flex items-center">
+    <div class="mx-auto flex max-w-5xl flex-col items-center px-6 py-20 text-center">
+
+      <div class="fade-up">
+        <img src="/img/landing/brick-building-storefront.webp" alt="Brick building storefront"
+          class="mx-auto w-full max-w-2xl rounded-[2rem] shadow-2xl" />
+      </div>
+
+      <div class="mt-12 fade-up">
+        <h2 class="text-5xl font-black md:text-7xl">
+          Build Your Shop<br />
+          In Minutes
+        </h2>
+
+        <p class="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-zinc-600">
+          Open source. Simple. Deployable anywhere.
+        </p>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+          <a href="https://github.com/shopbrick/shopbrick"
+            class="rounded-2xl bg-zinc-900 px-8 py-4 text-lg font-semibold text-white transition hover:-translate-y-1">
+            GitHub
+          </a>
+
+          <a href="#"
+            class="rounded-2xl border border-zinc-300 bg-white px-8 py-4 text-lg font-semibold transition hover:-translate-y-1">
+            Documentation
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const elements = document.querySelectorAll('.fade-up')
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible')
+          }
+        })
+      },
+      {
+        threshold: 0.15
+      }
+    )
+
+    elements.forEach(el => observer.observe(el))
+  </script>
+
+</body>
+
+</html>
